@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="zilali" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تواصل مع ظلالي — معاينة مجانية في الرياض | ظلالي</title>
+<meta name="description" content="تواصل مع ظلالي لطلب معاينة مجانية للمظلات والسواتر والجلسات الخارجية في الرياض. اتصل بنا أو راسلنا على واتساب واترك رقمك ونوع مشروعك لنعاود التواصل خلال ساعات العمل.">
+<link rel="canonical" href="https://zilali.example/contact/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:title" content="تواصل مع ظلالي — معاينة مجانية في الرياض | ظلالي">
+<meta property="og:description" content="تواصل مع ظلالي لطلب معاينة مجانية للمظلات والسواتر والجلسات الخارجية في الرياض. اتصل بنا أو راسلنا على واتساب واترك رقمك ونوع مشروعك لنعاود التواصل خلال ساعات العمل.">
+<meta property="og:image" content="https://zilali.example/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="stylesheet" href="../assets/css/daisyui.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://zilali.example/"},{"@type":"ListItem","position":2,"name":"تواصل","item":"https://zilali.example/contact/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"ظلالي","telephone":"+966500000000","address":{"@type":"PostalAddress","addressLocality":"الرياض","addressCountry":"SA"},"openingHours":"Sa-Th 08:00-22:00"}</script>
+</head>
+<body>
+<div data-slot="header"></div>
+<main><nav aria-label="مسار التنقّل" class="container-zi" style="padding-top:1rem;font-size:.85rem;color:var(--ink-soft)"><a href="../index.html">الرئيسية</a> / <span>تواصل</span></nav><section class="section"><div class="container-zi" style="display:grid;gap:2rem;grid-template-columns:1fr" >
+        <div class="lg:grid-cols-2" style="display:grid;gap:2rem">
+          <div>
+            <h1 class="section-title">اطلب معاينة مجانية</h1>
+            <p class="section-sub">اترك رقمك ونوع المشروع ونتواصل معك خلال ساعات العمل.</p>
+            <div style="margin-top:1.2rem;display:flex;flex-direction:column;gap:.6rem;color:var(--ink-soft)">
+              <div>📞 0500000000</div><div>📍 الرياض — حي العليا، طريق الملك فهد</div><div>🕒 السبت – الخميس، 8 ص – 10 م</div>
+            </div>
+          </div>
+          <form class="card-zi" id="contact-form" style="display:flex;flex-direction:column;gap:.8rem">
+            <label style="font-weight:600;font-size:.9rem">الاسم<input required name="name" style="width:100%;margin-top:.3rem;padding:.7rem;border:1px solid var(--line-strong);border-radius:10px" placeholder="اسمك"></label>
+            <label style="font-weight:600;font-size:.9rem">رقم الجوال<input required name="phone" inputmode="tel" style="width:100%;margin-top:.3rem;padding:.7rem;border:1px solid var(--line-strong);border-radius:10px" placeholder="05xxxxxxxx"></label>
+            <label style="font-weight:600;font-size:.9rem">نوع المشروع<select name="type" id="contact-type" style="width:100%;margin-top:.3rem;padding:.7rem;border:1px solid var(--line-strong);border-radius:10px"><option value="carShades">مظلات سيارات</option><option value="gardenShades">مظلات جلسات وحدائق</option><option value="pergola">برجولات</option><option value="screens">سواتر</option><option value="hangars">هناجر</option><option value="tents">بيوت شعر</option></select></label>
+            <button class="btn-zi btn-primary btn-block" type="submit">إرسال الطلب</button>
+          </form>
+        </div></div></section>
+      <script type="module">
+        import { getState, toast } from '../assets/js/site.js';
+        import { Store } from '../assets/js/store.js';
+        document.getElementById('contact-form').addEventListener('submit', e => {
+          e.preventDefault(); const fd = new FormData(e.target); const st = Store.load();
+          st.leads.push({ id:'L'+(st.leads.length+1), createdAt:new Date().toISOString().slice(0,10), name:fd.get('name'), phone:fd.get('phone'), type:st.pricing.types[fd.get('type')].name, material:'-', length:0,width:0,area:0, city:st.settings.city, low:0,high:0, source:'contact', status:'new' });
+          Store.set('leads', st.leads); e.target.reset(); toast('وصل طلبك — سنتواصل معك خلال ساعات العمل');
+        });
+      </script></main>
+<div data-slot="footer"></div>
+<script type="module">import { initSite } from '../assets/js/site.js'; initSite('contact');</script>
+</body></html>

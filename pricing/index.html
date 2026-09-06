@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="zilali" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حاسبة أسعار المظلات والسواتر في الرياض | ظلالي</title>
+<meta name="description" content="احسب سعر مظلتك أو ساترك في الرياض فوراً: حدّد المساحة والخامة والمدينة واحصل على تقدير مبدئي بالريال قبل المعاينة المجانية من ظلالي.">
+<link rel="canonical" href="https://zilali.example/pricing/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:title" content="حاسبة أسعار المظلات والسواتر في الرياض | ظلالي">
+<meta property="og:description" content="احسب سعر مظلتك فوراً واحصل على تقدير مبدئي بالريال قبل المعاينة المجانية.">
+<meta property="og:image" content="https://zilali.example/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="stylesheet" href="../assets/css/daisyui.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+ {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://zilali.example/"},
+ {"@type":"ListItem","position":2,"name":"الأسعار","item":"https://zilali.example/pricing/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"تسعير المظلات والسواتر","provider":{"@type":"HomeAndConstructionBusiness","name":"ظلالي"},"areaServed":{"@type":"City","name":"الرياض"},"offers":[
+ {"@type":"Offer","name":"مظلات سيارات","priceCurrency":"SAR","priceRange":"180-320 SAR/m2"},
+ {"@type":"Offer","name":"مظلات جلسات وحدائق","priceCurrency":"SAR","priceRange":"200-380 SAR/m2"},
+ {"@type":"Offer","name":"برجولات","priceCurrency":"SAR","priceRange":"350-520 SAR/m2"},
+ {"@type":"Offer","name":"سواتر","priceCurrency":"SAR","priceRange":"140-260 SAR/m2"}]}
+</script>
+</head>
+<body>
+<div data-slot="header"></div>
+<main>
+  <nav aria-label="مسار التنقّل" class="container-zi" style="padding-top:1rem;font-size:.85rem;color:var(--ink-soft)">
+    <a href="../index.html">الرئيسية</a> / <span>الأسعار</span>
+  </nav>
+  <section class="section-tight"><div class="container-zi">
+    <span class="eyebrow">حاسبة الأسعار</span>
+    <h1 style="font-size:clamp(1.8rem,5vw,2.8rem)">احسب سعر مشروعك في الرياض</h1>
+    <p class="section-sub" style="font-size:1.08rem;max-width:60ch">حدّد المساحة والخامة والمدينة واحصل على تقدير مبدئي فوري بالريال. السعر النهائي يُحدّد بعد المعاينة المجانية.</p>
+  </div></section>
+  <section class="section-tight"><div class="container-zi">
+    <div id="calc-app"></div>
+  </div></section>
+  <section class="section-tight"><div class="container-zi" style="max-width:760px">
+    <h2 class="section-title" style="font-size:1.5rem">كيف نحسب السعر؟</h2>
+    <p class="text-soft">نحسب المساحة (الطول × العرض)، ثم نضربها في سعر المتر للخامة المختارة ومعامل المدينة، ونضيف رسوم التركيب إن اخترتها. النتيجة نطاق تقريبي، والسعر النهائي بعد المعاينة المجانية لأن كل موقع يختلف.</p>
+    <p class="text-faint" style="font-size:.82rem">* الأسعار المعروضة تقريبية للعرض وتُحدّث حسب السوق والخامات.</p>
+  </div></section>
+</main>
+<div data-slot="footer"></div>
+<script type="module">
+  import { initSite } from '../assets/js/site.js';
+  import { mountCalculator } from '../assets/js/calculator.js';
+  initSite('pricing');
+  mountCalculator(document.getElementById('calc-app'));
+</script>
+</body>
+</html>

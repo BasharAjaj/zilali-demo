@@ -1,0 +1,4 @@
+{ "name": "ظلالي", "short_name": "ظلالي", "lang": "ar", "dir": "rtl",
+  "start_url": "/", "display": "standalone",
+  "background_color": "#f7f5fb", "theme_color": "#7c3aed",
+  "icons": [{ "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }] }
